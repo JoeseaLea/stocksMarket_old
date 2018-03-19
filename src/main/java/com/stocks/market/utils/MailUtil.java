@@ -112,10 +112,21 @@ public class MailUtil {
 		mailNeedSend.offer(mailInfo);
 	}
 	
+	/**
+	 * 发送邮件
+	 * @param content
+	 * @throws MessagingException
+	 */
 	public static void send(String content) throws MessagingException {
 		send("无标题", content);
 	}
 	
+	/**
+	 * 发送邮件
+	 * @param subject
+	 * @param content
+	 * @throws MessagingException
+	 */
 	public static void send(String subject, String content) throws MessagingException {
 		//构建授权信息，用于进行SMTP进行身份验证
 		Authenticator authenticator = new Authenticator() {
@@ -201,8 +212,9 @@ public class MailUtil {
 		// 此处填写你的账号
 		props.put("mail.user", "354046335@qq.com");
 		// 此处的密码就是前面说的16位STMP口令
-		props.put("mail.password", "kboregcxbvlecafe");
+		props.put("mail.password", "igzyodsuzvcrbiac");
 	}
+	
 	static {
 		useQQMail();
 	}

@@ -11,7 +11,6 @@ public class SendMailTest {
 		try {
 			MailUtil.send("Hello world!");
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
