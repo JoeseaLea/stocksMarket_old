@@ -1,5 +1,6 @@
 package com.stocks.market;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,6 +11,7 @@ import java.util.Random;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import com.stocks.market.beans.StockBean;
 import com.stocks.market.utils.HttpUtil;
@@ -34,6 +36,7 @@ public class StocksMarket {
 	public static String specialTreatStocks = "";
 
 	public static void main(String[] args) {
+		PropertyConfigurator.configure(System.getProperty("user.dir") + File.separator + "conf" + File.separator + "log4j.properties"); 
 		
 		/**
 		 * 开启发送邮件功能监听器
@@ -44,7 +47,6 @@ public class StocksMarket {
 		 * 开启股票监听
 		 */
 		StocksMarket.listen();
-		
 	}
 	
 	/**
@@ -59,6 +61,7 @@ public class StocksMarket {
 		 */
 		new Thread(new Runnable() {
 			public void run() {
+				logger.info("监听振幅超过5%的股票");
 				String codes = "600069,600099,600148,600173,600209,600212,600249,600425,600449,600636,600679,600698,600722,600753,600760,600768,600802,601116,603009,603558,603799,000595,000615,000635,000672,000693,000710,000711,000791,000803,000877,000885,000906,000912,000922,000923,000935,000953,000980,000993,002110,002113,002265,002287,002297,002300,002302,002307,002316,002333,002346,002464,002492,002576,002651,002735,300103,300175,300209,300223,300268,300299,300304,300308,300323,300355,300376,300398,300402";
 				while (true) {
 					if (isMarketTime()) {

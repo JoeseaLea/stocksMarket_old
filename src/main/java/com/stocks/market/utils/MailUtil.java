@@ -47,6 +47,7 @@ public class MailUtil {
 						
 						if (null != mailInfo) {
 							try {
+								logger.info("发送邮件（" + mailInfo.getSubject() + "）");
 								send(mailInfo.getSubject(), mailInfo.getContent());
 							} catch (MessagingException e) {
 								/*
@@ -173,8 +174,10 @@ public class MailUtil {
 	 */
 	private static void changeMailProperties() {
 		if (props.getProperty("mail.smtp.host").equals("smtp.qq.com")) {
+			logger.info("Change 163 mail to send mail");
 			use163Mail();
 		} else {
+			logger.info("Change QQ mail to send mail");
 			useQQMail();
 		}
 	}
