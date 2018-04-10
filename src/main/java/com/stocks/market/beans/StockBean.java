@@ -32,11 +32,11 @@ public class StockBean {
 	/**
 	 * 竞买价，即“买一”报价
 	 */
-	private Double biddingPirce;
+	private Double biddingPrice;
 	/**
 	 * 竞卖价，即“卖一”报价
 	 */
-	private Double auctionPirce;
+	private Double auctionPrice;
 	/**
 	 * 成交的股票数
 	 * 注：由于股票交易以一百股为基本单位，所以在使用时，通常把该值除以一百
@@ -181,17 +181,17 @@ public class StockBean {
 	public void setLow(Double low) {
 		this.low = low;
 	}
-	public Double getBiddingPirce() {
-		return biddingPirce;
+	public Double getBiddingPrice() {
+		return biddingPrice;
 	}
-	public void setBiddingPirce(Double biddingPirce) {
-		this.biddingPirce = biddingPirce;
+	public void setBiddingPrice(Double biddingPrice) {
+		this.biddingPrice = biddingPrice;
 	}
-	public Double getAuctionPirce() {
-		return auctionPirce;
+	public Double getAuctionPrice() {
+		return auctionPrice;
 	}
-	public void setAuctionPirce(Double auctionPirce) {
-		this.auctionPirce = auctionPirce;
+	public void setAuctionPrice(Double auctionPrice) {
+		this.auctionPrice = auctionPrice;
 	}
 	public Integer getCountOfTrade() {
 		return countOfTrade;

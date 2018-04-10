@@ -235,8 +235,8 @@ public class StocksMarket {
 							stockBean.setCurrent(Double.valueOf(resultDatas[3]));
 							stockBean.setHigh(Double.valueOf(resultDatas[4]));
 							stockBean.setLow(Double.valueOf(resultDatas[5]));
-							stockBean.setBiddingPirce(Double.valueOf(resultDatas[6]));
-							stockBean.setAuctionPirce(Double.valueOf(resultDatas[7]));
+							stockBean.setBiddingPrice(Double.valueOf(resultDatas[6]));
+							stockBean.setAuctionPrice(Double.valueOf(resultDatas[7]));
 							stockBean.setCountOfTrade(Integer.valueOf(resultDatas[8]));
 							stockBean.setAmountOfTrade(Double.valueOf(resultDatas[9]));
 							stockBean.setTradeDate(resultDatas[30]);
