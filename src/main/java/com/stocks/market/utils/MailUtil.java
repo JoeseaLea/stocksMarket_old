@@ -197,7 +197,7 @@ public class MailUtil {
 		// 此处填写你的账号
 		props.put("mail.user", "JoeseaLea@163.com");
 		// 此处的密码就是前面说的16位STMP口令
-		props.put("mail.password", "security163!@#");
+		props.put("mail.password", "******");
 	}
 	
 	/**
